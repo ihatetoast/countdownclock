@@ -1,0 +1,37 @@
+/* Font-Family: 'Cinzel', Cursive;
+Font-Size: 44px;
+Font-Family: 'Fauna One', Serif;
+Font-Size: 14px; */
+
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+  font-Family: 'Fauna One', Serif;
+  font-size: 1em;
+}
+
+.App{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+/* top. header-ish */
+h1{
+  font-Family: 'Cinzel', Cursive;
+  font-Size: 1.5em;
+}
+h2{
+  font-Size: .65em;
+}
+
+/* main  */
+.content{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+}
+
