@@ -36,17 +36,18 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <div className="content title-div">
-          <h1>Countdown to {this.state.endDate}</h1>
-          <h2>Because we need another way to fire up the anxiety</h2>
+        <div className="countdown-div content-box">
+          <h1 className="header1">Countdown to </h1>
+          <h1 className="date1">{this.state.endDate}</h1>
+          <h2>Because we need another way to fire up anxiety</h2>
+          <Timer goalTime={this.state.endDate} />
         </div>
-        <Timer goalTime={this.state.endDate} />
 
-        <div className="content input-div">
+        <div className="form-div content-box">
+          <p>
+            Do you need another date to fret about? If so, enter date below:
+          </p>
           <form onSubmit={this.handleSubmit}>
-            <p>
-              Do you need another date to fret about? If so, enter one below:
-            </p>
             <label>
               New date:
               <input
@@ -55,12 +56,19 @@ class App extends Component {
                 onChange={this.handleChange}
               />
             </label>
-
             <input type="submit" value="Submit" />
           </form>
-          <h1>Countdown to {date}</h1>
+        </div>
+        <div className="countdown-div content-box">
+          <h1 className="header2">Countdown to </h1>
+          <h1 className="date2">{date}</h1>
           {timer}
         </div>
+        <footer>
+          <p>
+            Katy Cassidy | ihatetoast | {new Date(Date.now()).getFullYear()}
+          </p>
+        </footer>
       </div>
     );
   }

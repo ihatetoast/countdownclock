@@ -44,34 +44,27 @@ class Timer extends Component {
 
   render() {
     return (
-      <div className="content time-div">
-        <div className="time">
-          <span className="num">
-            {!isNaN(this.state.days) ? this.leading0(this.state.days) : '?'}
-          </span>{' '}
-          days
+      <div className="timer-div timer-box">
+        <div className="num">
+          {!isNaN(this.state.days)
+            ? this.leading0(this.state.days) + ': '
+            : '?'}
         </div>
-        <div className="time">
-          <span className="num">
-            {!isNaN(this.state.hours) ? this.leading0(this.state.hours) : '?'}
-          </span>{' '}
-          hours
+
+        <div className="num">
+          {!isNaN(this.state.hours)
+            ? this.leading0(this.state.hours) + ': '
+            : '?'}
         </div>
-        <div className="time">
-          <span className="num">
-            {!isNaN(this.state.minutes)
-              ? this.leading0(this.state.minutes)
-              : '?'}
-          </span>{' '}
-          minutes
+
+        <div className="num">
+          {!isNaN(this.state.minutes)
+            ? this.leading0(this.state.minutes) + ': '
+            : '?'}
         </div>
-        <div className="time">
-          <span className="num">
-            {!isNaN(this.state.seconds)
-              ? this.leading0(this.state.seconds)
-              : '?'}
-          </span>{' '}
-          seconds
+
+        <div className="num">
+          {!isNaN(this.state.seconds) ? this.leading0(this.state.seconds) : '?'}
         </div>
       </div>
     );
